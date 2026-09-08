@@ -1,1 +1,93 @@
-<img src="images/profile.jpg" alt="รูปโปรไฟล์" class="avatar">
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าแรก | ชื่อ-นามสกุลของคุณ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- แถบเมนูด้านบน -->
+    <header class="site-header">
+        <a href="index.html" class="logo">ชื่อ-นามสกุลของคุณ</a>
+        <nav class="site-nav">
+            <ul>
+                <li><a href="index.html" class="active">หน้าแรก</a></li>
+                <li><a href="experience.html">ประสบการณ์</a></li>
+                <li><a href="projects.html">ผลงาน</a></li>
+                <li><a href="contact.html">ติดต่อ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- เนื้อหาหลัก -->
+    <main>
+        <!-- 1. ส่วนแนะนำตัว -->
+        <section class="hero">
+            <img src="images/profile.jpg" alt="รูปโปรไฟล์ของคุณ" class="avatar">
+            <div class="hero-text">
+                <h1>สวัสดีครับ ผมชื่อ [ใส่ชื่อของคุณ]</h1>
+                <p class="tagline">นักศึกษาวิศวกรรมศาสตร์ | ผู้พัฒนาเว็บไซต์</p>
+                <p>
+                    ผมกำลังศึกษาอยู่ชั้นปีที่ 3 สนใจงานด้าน <strong>การพัฒนาเว็บไซต์</strong> และระบบอิเล็กทรอนิกส์
+                    และกำลังมองหาโอกาสฝึกงานเพื่อพัฒนาทักษะในสายงานนี้ครับ
+                </p>
+                <a href="contact.html" class="btn">ติดต่อผม</a>
+            </div>
+        </section>
+
+        <!-- 2. จุดแข็งและสิ่งที่กำลังพัฒนา -->
+        <section class="about">
+            <h2>จุดแข็งและสิ่งที่กำลังพัฒนา</h2>
+            <div class="two-col">
+                <div class="col">
+                    <h3>จุดแข็ง</h3>
+                    <ul>
+                        <li>เรียนรู้เครื่องมือใหม่ๆ ได้เร็ว</li>
+                        <li>มีความรับผิดชอบและละเอียดรอบคอบกับงาน</li>
+                        <li>สามารถทำงานร่วมกับผู้อื่นเป็นทีมได้ดี</li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h3>สิ่งที่กำลังพัฒนา</h3>
+                    <ul>
+                        <li>กำลังฝึกฝนการนำเสนอผลงานให้มั่นใจยิ่งขึ้น</li>
+                        <li>กำลังพัฒนาทักษะภาษาอังกฤษเชิงเทคนิคเพิ่มเติม</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. ทักษะเด่น -->
+        <section class="skills">
+            <h2>ทักษะเด่น</h2>
+            <div class="skill-grid">
+                <div class="skill-card">
+                    <h3>HTML & CSS</h3>
+                    <p>วางโครงสร้างและตกแต่งเว็บไซต์ให้รองรับทุกหน้าจอ</p>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>เขียนฟังก์ชันการโต้ตอบพื้นฐานบนหน้าเว็บ</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Python</h3>
+                    <p>เขียนสคริปต์วิเคราะห์ข้อมูลและคำนวณทางวิศวกรรม</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Git & GitHub</h3>
+                    <p>จัดการเวอร์ชันของโค้ดและนำเว็บขึ้นออนไลน์</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ท้ายเว็บ -->
+    <footer class="site-footer">
+        <p>&copy; 2026 ชื่อ-นามสกุลของคุณ</p>
+        <p>สร้างด้วย HTML และ CSS</p>
+    </footer>
+
+</body>
+</html>

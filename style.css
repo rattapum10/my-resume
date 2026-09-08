@@ -1,0 +1,381 @@
+/* ==========================================================================
+   1. Reset & General Styles (การตั้งค่าพื้นฐาน)
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Sarabun', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+h1, h2, h3 {
+    color: #1e293b;
+    margin-bottom: 0.75rem;
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; margin-top: 1.5rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
+h3 { font-size: 1.2rem; }
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #1d4ed8;
+}
+
+/* ==========================================================================
+   2. Header & Navigation (แถบเมนูบน)
+   ========================================================================== */
+.site-header {
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #1e293b;
+}
+
+.site-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+.site-nav a {
+    color: #64748b;
+    font-weight: 500;
+    padding: 0.5rem 0;
+}
+
+.site-nav a:hover,
+.site-nav a.active {
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+}
+
+/* ==========================================================================
+   3. Components (ส่วนประกอบย่อย)
+   ========================================================================== */
+/* ปุ่มกด */
+.btn {
+    display: inline-block;
+    background-color: #2563eb;
+    color: #ffffff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+    color: #ffffff;
+}
+
+/* หัวข้อหน้าเพจ */
+.page-head {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.tagline {
+    color: #64748b;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   4. Index Page (หน้าแรก)
+   ========================================================================== */
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.avatar {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.col {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.col ul {
+    padding-left: 1.2rem;
+}
+
+.col li {
+    margin-bottom: 0.5rem;
+}
+
+.skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+.skill-card h3 {
+    color: #2563eb;
+}
+
+/* ==========================================================================
+   5. Experience Page (หน้าประสบการณ์)
+   ========================================================================== */
+.timeline {
+    margin-top: 1rem;
+}
+
+.timeline-item {
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-left: 4px solid #2563eb;
+    margin-bottom: 1rem;
+    border-radius: 0 8px 8px 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.period {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 0.25rem;
+}
+
+.grade-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.grade-table caption {
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #64748b;
+}
+
+.grade-table th,
+.grade-table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.grade-table th {
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* ==========================================================================
+   6. Projects Page (หน้าผลงาน)
+   ========================================================================== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.project-body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.tech-list li {
+    background-color: #eff6ff;
+    color: #1d4ed8;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.project-links {
+    margin-top: auto;
+}
+
+/* ==========================================================================
+   7. Contact Page (หน้าติดต่อ)
+   ========================================================================== */
+.contact-list {
+    list-style: none;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    padding: 1.25rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.contact-list li {
+    display: flex;
+    margin-bottom: 0.75rem;
+}
+
+.contact-list .label {
+    width: 100px;
+    font-weight: bold;
+    color: #64748b;
+}
+
+.contact-form {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.field {
+    margin-bottom: 1.25rem;
+}
+
+.field label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* ==========================================================================
+   8. Footer (ส่วนท้ายเว็บ)
+   ========================================================================== */
+.site-footer {
+    background-color: #1e293b;
+    color: #94a3b8;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.875rem;
+}
+
+.site-footer p {
+    margin-bottom: 0.25rem;
+}
+
+/* ==========================================================================
+   9. Responsive Design (รองรับมือถือและหน้าจอเล็ก)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .site-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+}
