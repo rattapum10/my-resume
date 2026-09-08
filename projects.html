@@ -3,104 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ผลงาน | รัฐภูมิ เล่าคุ้ม</title>
+    <title>ผลงาน - Ratthaphum L.</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- แถบเมนูด้านบน -->
     <header class="site-header">
-        <a href="index.html" class="logo">รัฐภูมิ เล่าคุ้ม</a>
-        <nav class="site-nav">
-            <ul>
-                <li><a href="index.html">หน้าแรก</a></li>
-                <li><a href="experience.html">ประสบการณ์</a></li>
-                <li><a href="projects.html" class="active">ผลงาน</a></li>
-                <li><a href="contact.html">ติดต่อ</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <span class="site-title">Ratthaphum L.</span>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="experience.html">ประวัติการทำงาน</a></li>
+                    <li><a href="projects.html" class="active">ผลงาน</a></li>
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- เนื้อหาหลัก -->
-    <main>
-        <section class="page-head">
+    <main class="main-content">
+        <section class="page-header text-center">
             <h1>ผลงาน</h1>
-            <p class="tagline">โครงงานและโปรเจกต์ที่เคยพัฒนา</p>
+            <p class="subtitle">โครงงานและโปรเจกต์ที่เคยพัฒนา</p>
         </section>
 
-        <section>
-            <h2>โครงงานที่ผ่านมา</h2>
-            <div class="project-grid">
-
-                <!-- โปรเจกต์ที่ 1 -->
-                <article class="project-card">
-                    <img src="https://picsum.photos/seed/p1/600/400" alt="ระบบตรวจวัดอุณหภูมิร่างกาย">
-                    <div class="project-body">
-                        <h3>ระบบตรวจวัดอุณหภูมิร่างกาย (Body Temperature Monitor)</h3>
-                        <p>
-                            ออกแบบและพัฒนาระบบตรวจวัดอุณหภูมิร่างกายอิเล็กทรอนิกส์
-                            พร้อมออกแบบแผ่นวงจรพิมพ์ (PCB Layout) เพื่อใช้วัดผลและแสดงค่าได้อย่างแม่นยำ
-                        </p>
-                        <ul class="tech-list">
-                            <li>Hardware Design</li>
-                            <li>PCB Layout</li>
-                            <li>Microcontroller</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com" target="_blank" rel="noopener">ซอร์สโค้ด</a>
-                        </div>
+        <section class="projects-wrapper">
+            <h2 class="section-title">โครงงานที่ผ่านมา</h2>
+            
+            <div class="projects-grid">
+                
+                <!-- โครงงานที่ 1 -->
+                <div class="project-card">
+                    <div class="project-image-box">
+                        <img src="images/project1.jpg" alt="ระบบตรวจวัดอุณหภูมิร่างกาย" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80';">
                     </div>
-                </article>
-
-                <!-- โปรเจกต์ที่ 2 -->
-                <article class="project-card">
-                    <img src="https://picsum.photos/seed/p2/600/400" alt="ดัดแปลง ชุด Feed Horn Satellite">
-                    <div class="project-body">
-                        <h3>ชุดรับสัญญาณดาวเทียม LEO (Satellite Feed Horn Modification)</h3>
-                        <p>
-                            ศึกษาและดัดแปลง Feed Horn และ Waveguide สำหรับรับสัญญาณดาวเทียมวงโค็ดต่ำ (LEO Satellite)
-                            พร้อมคำนวณและออกแบบ Septum Polarizer
-                        </p>
-                        <ul class="tech-list">
-                            <li>RF & Waveguide</li>
-                            <li>Vivado</li>
-                            <li>PetaLinux</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com" target="_blank" rel="noopener">ซอร์สโค้ด</a>
+                    <div class="project-details">
+                        <div class="project-tags">
+                            <span class="tag">Embedded Systems</span>
+                            <span class="tag">PCB Design</span>
                         </div>
-                    </div>
-                </article>
-
-                <!-- โปรเจกต์ที่ 3 -->
-                <article class="project-card">
-                    <img src="https://picsum.photos/seed/p3/600/400" alt="เว็บไซต์ Personal Resume">
-                    <div class="project-body">
-                        <h3>เว็บไซต์ Resume ส่วนตัว (Static Website)</h3>
-                        <p>
-                            พัฒนาเว็บไซต์เรซูเม่แบบ Responsive รองรับการแสดงผลทุกหน้าจอด้วย HTML5, CSS Grid/Flexbox
-                            และจัดทำระบบด้วย Git / GitHub Pages
+                        <h3 class="project-title">ระบบตรวจวัดอุณหภูมิร่างกาย (Body Temperature Monitor)</h3>
+                        <p class="project-desc">
+                            ออกแบบและพัฒนาระบบตรวจวัดอุณหภูมิร่างกายอิเล็กทรอนิกส์ พร้อมออกแบบแผ่นวงจรพิมพ์ (PCB Layout) เพื่อใช้วัดผลและแสดงค่าได้อย่างแม่นยำ
                         </p>
-                        <ul class="tech-list">
-                            <li>HTML5</li>
-                            <li>CSS3</li>
-                            <li>Git/GitHub</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://github.com" target="_blank" rel="noopener">ซอร์สโค้ด</a>
-                        </div>
                     </div>
-                </article>
+                </div>
+
+                <!-- โครงงานที่ 2 -->
+                <div class="project-card">
+                    <div class="project-image-box">
+                        <img src="images/project2.jpg" alt="การดัดแปลงชุดรับสัญญาณดาวเทียม" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1516110833967-0b5716ca1387?auto=format&fit=crop&w=800&q=80';">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-tags">
+                            <span class="tag">Satellite Comm</span>
+                            <span class="tag">Waveguide</span>
+                        </div>
+                        <h3 class="project-title">การดัดแปลงชุดรับสัญญาณดาวเทียม OneWeb LEO</h3>
+                        <p class="project-desc">
+                            ดัดแปลงโครงสร้างทางกล Feed Horn และ Waveguide ของจานดาวเทียม IPSTAR เดิม เพื่อรองรับการรับสัญญาณดาวเทียมวงโคจรต่ำ OneWeb LEO
+                        </p>
+                    </div>
+                </div>
+
+                <!-- โครงงานที่ 3 -->
+                <div class="project-card">
+                    <div class="project-image-box">
+                        <img src="images/project3.jpg" alt="ระบบโซลาร์เซลล์ชุมชน" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1509391365360-2e959784a276?auto=format&fit=crop&w=800&q=80';">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-tags">
+                            <span class="tag">Solar Energy</span>
+                            <span class="tag">Electrical System</span>
+                        </div>
+                        <h3 class="project-title">ติดตั้งระบบไฟฟ้าและโซลาร์เซลล์เพื่อชุมชน</h3>
+                        <p class="project-desc">
+                            วางแผนและติดตั้งระบบส่องสว่างพลังงานแสงอาทิตย์สำหรับบริการวิชาการ ชุมชนตำบลเกาะสำโรง จังหวัดกาญจนบุรี
+                        </p>
+                    </div>
+                </div>
+
+                <!-- โครงงานที่ 4 -->
+                <div class="project-card">
+                    <div class="project-image-box">
+                        <img src="images/project4.jpg" alt="การประมวลผลสัญญาณดิจิทัล" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80';">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-tags">
+                            <span class="tag">FPGA</span>
+                            <span class="tag">SDR / Vivado</span>
+                        </div>
+                        <h3 class="project-title">ระบบประมวลผลสัญญาณดิจิทัลบน FPGA</h3>
+                        <p class="project-desc">
+                            พัฒนาและจำลองการทำงานระบบประมวลผลสัญญาณผ่านซอฟต์แวร์ Xilinx Vivado ร่วมกับบอร์ดพัฒนา ZCU104 และตัวรับส่งสัญญาณ AD9361
+                        </p>
+                    </div>
+                </div>
 
             </div>
         </section>
     </main>
-
-    <!-- ท้ายเว็บ -->
-    <footer class="site-footer">
-        <p>&copy; 2026 รัฐภูมิ เล่าคุ้ม</p>
-        <p>สร้างด้วย HTML และ CSS</p>
-    </footer>
-
 </body>
 </html>

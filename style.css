@@ -1,6 +1,20 @@
 /* ==========================================================================
-   1. Reset & General Styles (การตั้งค่าพื้นฐาน)
+   Global Variables & Reset
    ========================================================================== */
+:root {
+    --primary-color: #0f172a;
+    --accent-color: #2563eb;
+    --accent-hover: #1d4ed8;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --border-color: #e2e8f0;
+    --radius: 12px;
+    --shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    --transition: all 0.25s ease;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,65 +22,36 @@
 }
 
 body {
-    font-family: 'Sarabun', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Sarabun', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
     line-height: 1.6;
-    color: #333333;
-    background-color: #f8f9fa;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-main {
-    flex: 1;
-    max-width: 1000px;
-    width: 100%;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
-}
-
-h1, h2, h3 {
-    color: #1e293b;
-    margin-bottom: 0.75rem;
-}
-
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; margin-top: 1.5rem; border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; }
-h3 { font-size: 1.2rem; }
-
-p {
-    margin-bottom: 1rem;
-}
-
-a {
-    color: #2563eb;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: #1d4ed8;
 }
 
 /* ==========================================================================
-   2. Header & Navigation (แถบเมนูบน)
+   Header & Navigation
    ========================================================================== */
 .site-header {
-    background-color: #ffffff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-    padding: 1rem 1.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: var(--primary-color);
+    color: #ffffff;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
-.logo {
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: #1e293b;
+.header-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #ffffff;
 }
 
 .site-nav ul {
@@ -76,306 +61,645 @@ a:hover {
 }
 
 .site-nav a {
-    color: #64748b;
+    color: #cbd5e1;
+    text-decoration: none;
     font-weight: 500;
-    padding: 0.5rem 0;
+    transition: var(--transition);
 }
 
 .site-nav a:hover,
 .site-nav a.active {
-    color: #2563eb;
-    border-bottom: 2px solid #2563eb;
+    color: #ffffff;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 4px;
 }
 
 /* ==========================================================================
-   3. Components (ส่วนประกอบย่อย)
+   Main Layout & Components
    ========================================================================== */
-/* ปุ่มกด */
-.btn {
-    display: inline-block;
-    background-color: #2563eb;
-    color: #ffffff;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    font-weight: 500;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
+main {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 1.5rem;
 }
 
-.btn:hover {
-    background-color: #1d4ed8;
-    color: #ffffff;
-}
-
-/* หัวข้อหน้าเพจ */
-.page-head {
+.text-center {
     text-align: center;
-    margin-bottom: 2rem;
 }
 
-.tagline {
-    color: #64748b;
-    font-size: 1.1rem;
+h1 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
-/* ==========================================================================
-   4. Index Page (หน้าแรก)
-   ========================================================================== */
-.hero {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: 2rem 0;
+.subtitle {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
 }
 
-.avatar {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-}
-
-.hero-text {
-    flex: 1;
-}
-
-.two-col {
+/* Contact Grid Layout (2 Columns) */
+.contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    margin-top: 1rem;
+    align-items: start;
 }
 
-.col {
-    background-color: #ffffff;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+.contact-card {
+    background: var(--card-bg);
+    padding: 2.2rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
 }
 
-.col ul {
-    padding-left: 1.2rem;
+.contact-card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--bg-color);
+    color: var(--primary-color);
 }
 
-.col li {
-    margin-bottom: 0.5rem;
-}
-
-.skill-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.skill-card {
-    background-color: #ffffff;
-    padding: 1.25rem;
-    border-radius: 8px;
-    border: 1px solid #e2e8f0;
-}
-
-.skill-card h3 {
-    color: #2563eb;
-}
-
-/* ==========================================================================
-   5. Experience Page (หน้าประสบการณ์)
-   ========================================================================== */
-.timeline {
-    margin-top: 1rem;
-}
-
-.timeline-item {
-    background-color: #ffffff;
-    padding: 1.25rem;
-    border-left: 4px solid #2563eb;
-    margin-bottom: 1rem;
-    border-radius: 0 8px 8px 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.period {
-    display: inline-block;
-    font-size: 0.875rem;
-    color: #64748b;
-    margin-bottom: 0.25rem;
-}
-
-.grade-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.grade-table caption {
-    text-align: left;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #64748b;
-}
-
-.grade-table th,
-.grade-table td {
-    padding: 0.75rem 1rem;
-    text-align: left;
-    border-bottom: 1px solid #e2e8f0;
-}
-
-.grade-table th {
-    background-color: #f1f5f9;
-    color: #1e293b;
-}
-
-/* ==========================================================================
-   6. Projects Page (หน้าผลงาน)
-   ========================================================================== */
-.project-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1rem;
-}
-
-.project-card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-    border: 1px solid #e2e8f0;
-    display: flex;
-    flex-direction: column;
-}
-
-.project-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-
-.project-body {
-    padding: 1.25rem;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.tech-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    list-style: none;
-    margin: 1rem 0;
-}
-
-.tech-list li {
-    background-color: #eff6ff;
-    color: #1d4ed8;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-.project-links {
-    margin-top: auto;
-}
-
-/* ==========================================================================
-   7. Contact Page (หน้าติดต่อ)
-   ========================================================================== */
+/* Contact Info Items */
 .contact-list {
-    list-style: none;
-    margin-top: 1rem;
-    background-color: #ffffff;
-    padding: 1.25rem;
-    border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-.contact-list li {
     display: flex;
-    margin-bottom: 0.75rem;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.contact-list .label {
-    width: 100px;
-    font-weight: bold;
-    color: #64748b;
-}
-
-.contact-form {
-    background-color: #ffffff;
-    padding: 1.5rem;
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f5f9;
+    padding: 1rem 1.2rem;
     border-radius: 8px;
-    margin-top: 1rem;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--accent-color);
 }
 
-.field {
-    margin-bottom: 1.25rem;
+.contact-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.field label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
+.contact-value {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.98rem;
+    margin-top: 0.2rem;
+    transition: var(--transition);
 }
 
-.field input,
-.field textarea {
+.contact-value:hover {
+    color: var(--accent-color);
+}
+
+/* Form Controls */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
-    padding: 0.6rem;
+    padding: 0.75rem 1rem;
     border: 1px solid #cbd5e1;
-    border-radius: 6px;
+    border-radius: 8px;
     font-family: inherit;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    outline: none;
+    background-color: #ffffff;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+}
+
+/* Buttons */
+.btn {
+    background-color: var(--accent-color);
+    color: #ffffff;
+    padding: 0.85rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
     font-size: 1rem;
 }
 
-.field input:focus,
-.field textarea:focus {
-    outline: none;
-    border-color: #2563eb;
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+.btn:hover {
+    background-color: var(--accent-hover);
 }
 
-/* ==========================================================================
-   8. Footer (ส่วนท้ายเว็บ)
-   ========================================================================== */
+.btn-full {
+    width: 100%;
+}
+
+/* Footer */
 .site-footer {
-    background-color: #1e293b;
-    color: #94a3b8;
     text-align: center;
-    padding: 1.5rem;
-    margin-top: auto;
-    font-size: 0.875rem;
+    padding: 2rem 1rem;
+    background-color: var(--primary-color);
+    color: #94a3b8;
+    margin-top: 5rem;
+    font-size: 0.9rem;
 }
 
 .site-footer p {
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.3rem;
 }
 
-/* ==========================================================================
-   9. Responsive Design (รองรับมือถือและหน้าจอเล็ก)
-   ========================================================================== */
+/* Responsive Support */
 @media (max-width: 768px) {
-    .site-header {
+    .header-container {
         flex-direction: column;
         gap: 1rem;
     }
 
-    .hero {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================================================
+   Projects Page Styling (Clean Card Layout)
+   ========================================================================== */
+.page-header {
+    margin-bottom: 2rem;
+}
+
+.projects-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+}
+
+/* การ์ดผลงานทรงโค้นมน มีเงา นวลตา */
+.project-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.08);
+}
+
+/* จัดสัดส่วนรูปภาพ */
+.project-image-wrapper {
+    width: 100%;
+    max-height: 420px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.project-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* เนื้อหาใต้รูป */
+.project-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.6rem;
+}
+
+.project-content p {
+    color: #475569;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+/* ==========================================================================
+   Projects Page Modern Card Design
+   ========================================================================== */
+.projects-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+}
+
+/* การ์ดผลงานสไตล์เดียวกับหน้าติดต่อ */
+.project-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.8rem;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.08);
+}
+
+/* จัดส่วนแสดงรูปภาพให้คมชัดและขอบโค้งมน */
+.project-image-box {
+    width: 100%;
+    height: 320px;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f1f5f9;
+}
+
+.project-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* แท็กหมวดหมู่ผลงาน */
+.project-tags {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0.6rem;
+}
+
+.tag {
+    background-color: #eff6ff;
+    color: #2563eb;
+    font-size: 0.78rem;
+    font-weight: 600;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+}
+
+.project-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.6rem;
+}
+
+.project-desc {
+    color: #475569;
+    font-size: 0.98rem;
+    line-height: 1.6;
+}
+/* ==========================================================================
+   Projects Grid Layout
+   ========================================================================== */
+.projects-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* จัดเลย์เอาต์การ์ดเป็น 2 คอลัมน์ */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.8rem;
+}
+
+.project-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px -3px rgba(0, 0, 0, 0.08);
+}
+
+.project-image-box {
+    width: 100%;
+    height: 200px; /* ปรับความสูงรูปให้พอดีกับแบบ 2 คอลัมน์ */
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f1f5f9;
+    margin-bottom: 1rem;
+}
+
+.project-image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.6rem;
+}
+
+.tag {
+    background-color: #eff6ff;
+    color: #2563eb;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+}
+
+.project-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.project-desc {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+/* ปรับให้แสดงผลคอลัมน์เดียวบนมือถือ */
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* ==========================================================================
+   Experience Page Styling (Card & Modern Layout)
+   ========================================================================== */
+.experience-wrapper {
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+/* กรอบการ์ดสีขาวทรงโค้งมน */
+.info-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.4rem;
+}
+
+.card-subtitle {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 1.2rem;
+}
+
+/* Timeline Layout สำหรับประสบการณ์ */
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.2rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 1.2rem;
+    border-left: 3px solid #2563eb;
+}
+
+.badge-date {
+    display: inline-block;
+    background-color: #f1f5f9;
+    color: #475569;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.2rem 0.6rem;
+    border-radius: 6px;
+    margin-bottom: 0.4rem;
+}
+
+.item-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 0.3rem;
+}
+
+.item-desc {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ตารางข้อมูลการศึกษาและวิชาที่เรียน */
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.custom-table th {
+    background-color: #f8fafc;
+    color: #475569;
+    font-weight: 600;
+    padding: 0.8rem 1rem;
+    border-bottom: 2px solid #e2e8f0;
+}
+
+.custom-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f1f5f9;
+    color: #334155;
+    vertical-align: middle;
+}
+
+.custom-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.status-badge {
+    background-color: #dcfce7;
+    color: #166534;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+}
+/* ==========================================================================
+   Home / Hero Profile Card Styling
+   ========================================================================== */
+.profile-card {
+    max-width: 850px;
+    margin: 2rem auto;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 3rem 2.5rem;
+    box-shadow: 0 4px 25px -2px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    text-align: left;
+}
+
+/* กรอบรูปโปรไฟล์ */
+.profile-avatar-wrapper {
+    flex-shrink: 0;
+    width: 210px;
+    height: 210px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.15);
+    border: 4px solid #ffffff;
+    outline: 2px solid #e2e8f0;
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ข้อมูลผู้ใช้งาน */
+.profile-info {
+    flex: 1;
+}
+
+.profile-tagline {
+    display: inline-block;
+    background-color: #eff6ff;
+    color: #2563eb;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    margin-bottom: 0.8rem;
+}
+
+.profile-name {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+
+.profile-bio {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-bottom: 1.8rem;
+}
+
+/* ปุ่ม Action */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.75rem 1.6rem;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background-color: #2563eb;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+.btn-primary:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background-color: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+}
+
+.btn-secondary:hover {
+    background-color: #e2e8f0;
+    transform: translateY(-2px);
+}
+
+/* Responsive สำหรับหน้าจอมือถือ */
+@media (max-width: 768px) {
+    .profile-card {
         flex-direction: column;
         text-align: center;
+        padding: 2rem 1.5rem;
+        gap: 1.8rem;
     }
 
-    .two-col {
-        grid-template-columns: 1fr;
+    .profile-avatar-wrapper {
+        width: 160px;
+        height: 160px;
+    }
+
+    .action-buttons {
+        justify-content: center;
     }
 }

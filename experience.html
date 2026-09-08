@@ -3,101 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ประสบการณ์ | รัฐภูมิ เล่าคุ้ม</title>
+    <title>ประสบการณ์ - Ratthaphum L.</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- แถบเมนูด้านบน -->
     <header class="site-header">
-        <a href="index.html" class="logo">รัฐภูมิ เล่าคุ้ม</a>
-        <nav class="site-nav">
-            <ul>
-                <li><a href="index.html">หน้าแรก</a></li>
-                <li><a href="experience.html" class="active">ประสบการณ์</a></li>
-                <li><a href="projects.html">ผลงาน</a></li>
-                <li><a href="contact.html">ติดต่อ</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <span class="site-title">Ratthaphum L.</span>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="experience.html" class="active">ประวัติการทำงาน</a></li>
+                    <li><a href="projects.html">ผลงาน</a></li>
+                    <li><a href="contact.html">ติดต่อ</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- เนื้อหาหลัก -->
-    <main>
-        <section class="page-head">
+    <main class="main-content">
+        <section class="page-header text-center">
             <h1>ประสบการณ์</h1>
-            <p class="tagline">ประวัติการทำงาน การอบรม และการศึกษา</p>
+            <p class="subtitle">ประวัติการทำงาน การอบรม และการศึกษา</p>
         </section>
 
-        <!-- ประวัติการทำงานและการอบรม -->
-        <section>
-            <h2>ประสบการณ์ทำงานและการอบรม</h2>
-            <div class="timeline">
-                <article class="timeline-item">
-                    <span class="period">ม.ค. 2569 - ก.ค. 2569</span>
-                    <h3>นักศึกษาฝึกงาน</h3>
-                    <p>ฝึกงานทางด้านวิศวกรรม เรียนรู้การทำงานในระบบจริง และการทำงานร่วมกับทีมผู้เชี่ยวชาญ</p>
-                </article>
-                <article class="timeline-item">
-                    <span class="period">ม.ค. 2569</span>
-                    <h3>กิจกรรมบริการวิชาการและอนุรักษ์ธรรมชาติ</h3>
-                    <p>เข้าร่วมกิจกรรมจิตอาสาติดตั้งระบบไฟฟ้าและโซลาร์เซลล์ ชุมชนตำบลเกาะสำโรง จังหวัดกาญจนบุรี</p>
-                </article>
-            </div>
-        </section>
+        <div class="experience-wrapper">
+            
+            <!-- การ์ดที่ 1: ประสบการณ์ทำงานและการอบรม -->
+            <section class="info-card">
+                <h2 class="card-title">ประสบการณ์ทำงานและการอบรม</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <span class="badge-date">ม.ค. 2569 - ก.ค. 2569</span>
+                        <h3 class="item-title">นักศึกษาฝึกงาน</h3>
+                        <p class="item-desc">ฝึกงานทางด้านวิศวกรรม เรียนรู้การทำงานในระบบจริง และการทำงานร่วมกับทีมผู้เชี่ยวชาญ</p>
+                    </div>
 
-        <!-- ประวัติการศึกษา -->
-        <section>
-            <h2>ประวัติการศึกษา</h2>
-            <table class="grade-table">
-                <caption>ระดับการศึกษาและเกรดเฉลี่ย</caption>
-                <thead>
-                    <tr>
-                        <th>ระดับ</th>
-                        <th>สถาบัน</th>
-                        <th>ปีที่ศึกษา</th>
-                        <th>สถานะ</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>ปริญญาตรี วิศวกรรมไฟฟ้าและสื่อสาร</td>
-                        <td>มหาวิทยาลัยศิลปากร</td>
-                        <td>2566 - ปัจจุบัน</td>
-                        <td>กำลังศึกษา</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+                    <div class="timeline-item">
+                        <span class="badge-date">ม.ค. 2569</span>
+                        <h3 class="item-title">กิจกรรมบริการวิชาการและอนุรักษ์ธรรมชาติ</h3>
+                        <p class="item-desc">เข้าร่วมกิจกรรมจิตอาสาติดตั้งระบบไฟฟ้าและโซลาร์เซลล์ ชุมชนตำบลเกาะสำโรง จังหวัดกาญจนบุรี</p>
+                    </div>
+                </div>
+            </section>
 
-        <!-- รายวิชาที่เกี่ยวข้อง -->
-        <section>
-            <h2>รายวิชาที่สนใจและทำคะแนนได้ดี</h2>
-            <table class="grade-table">
-                <thead>
-                    <tr>
-                        <th>ชื่อวิชา</th>
-                        <th>รายละเอียด</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Signals and Systems</td>
-                        <td>การวิเคราะห์สัญญาณและระบบทางวิศวกรรม</td>
-                    </tr>
-                    <tr>
-                        <td>Web Development</td>
-                        <td>การพัฒนาเว็บไซต์โครงสร้าง HTML, CSS และ JavaScript</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
+            <!-- การ์ดที่ 2: ประวัติการศึกษา -->
+            <section class="info-card">
+                <h2 class="card-title">ประวัติการศึกษา</h2>
+                <p class="card-subtitle">ระดับการศึกษาและเกรดเฉลี่ย</p>
+
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th>ระดับ</th>
+                                <th>สถาบัน</th>
+                                <th>ปีที่ศึกษา</th>
+                                <th>สถานะ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>ปริญญาตรี</strong></td>
+                                <td>วิศวกรรมไฟฟ้าและสื่อสาร มหาวิทยาลัยศิลปากร</td>
+                                <td>2566 - ปัจจุบัน</td>
+                                <td><span class="status-badge">กำลังศึกษา</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- การ์ดที่ 3: รายวิชาที่สนใจ -->
+            <section class="info-card">
+                <h2 class="card-title">รายวิชาที่สนใจและทำคะแนนได้ดี</h2>
+
+                <div class="table-responsive">
+                    <table class="custom-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 35%;">ชื่อวิชา</th>
+                                <th>รายละเอียด</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Signals and Systems</strong></td>
+                                <td>การวิเคราะห์สัญญาณและระบบทางวิศวกรรม</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Web Development</strong></td>
+                                <td>การพัฒนาเว็บไซต์โครงสร้าง HTML, CSS และ JavaScript</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+        </div>
     </main>
 
-    <!-- ท้ายเว็บ -->
-    <footer class="site-footer">
-        <p>&copy; 2026 รัฐภูมิ เล่าคุ้ม</p>
-        <p>สร้างด้วย HTML และ CSS</p>
-    </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>

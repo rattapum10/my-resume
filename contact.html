@@ -3,80 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ติดต่อ | รัฐภูมิ เล่าคุ้ม</title>
+    <title>ติดต่อ - รัฐภูมิ เล่าคุ้ม</title>
+    <!-- **บรรทัดนี้สำคัญมาก ห้ามขาดครับ** -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- แถบเมนูด้านบน -->
     <header class="site-header">
-        <a href="index.html" class="logo">รัฐภูมิ เล่าคุ้ม</a>
-        <nav class="site-nav">
-            <ul>
-                <li><a href="index.html">หน้าแรก</a></li>
-                <li><a href="experience.html">ประสบการณ์</a></li>
-                <li><a href="projects.html">ผลงาน</a></li>
-                <li><a href="contact.html" class="active">ติดต่อ</a></li>
-            </ul>
-        </nav>
+        <div class="header-container">
+            <span class="site-title">Ratthaphum L.</span>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="index.html">หน้าแรก</a></li>
+                    <li><a href="experience.html">ประวัติการทำงาน</a></li>
+                    <li><a href="projects.html">ผลงาน</a></li>
+                    <li><a href="contact.html" class="active">ติดต่อ</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <!-- เนื้อหาหลัก -->
     <main>
-        <section class="page-head">
-            <h1>ติดต่อ</h1>
-            <p class="tagline">ยินดีรับฟังทุกโอกาสในการร่วมงานและการแลกเปลี่ยนความรู้</p>
+        <section class="contact-header text-center">
+            <h1>ติดต่อผม</h1>
+            <p class="subtitle">ยินดีรับฟังทุกโอกาสในการร่วมงานและการแลกเปลี่ยนความรู้ครับ</p>
         </section>
 
-        <!-- ช่องทางการติดต่อ -->
-        <section>
-            <h2>ช่องทางการติดต่อ</h2>
-            <ul class="contact-list">
-                <li>
-                    <span class="label">อีเมล</span>
-                    <a href="mailto:ratthaphum@example.com">ratthaphum@example.com</a>
-                </li>
-                <li>
-                    <span class="label">โทรศัพท์</span>
-                    <a href="tel:+66812345678">081-234-5678</a>
-                </li>
-                <li>
-                    <span class="label">GitHub</span>
-                    <a href="https://github.com" target="_blank" rel="noopener">github.com/ratthaphum</a>
-                </li>
-                <li>
-                    <span class="label">LinkedIn</span>
-                    <a href="https://linkedin.com" target="_blank" rel="noopener">linkedin.com/in/ratthaphum</a>
-                </li>
-            </ul>
-        </section>
+        <!-- โครงสร้างการ์ดติดต่อ 2 คอลัมน์ -->
+        <div class="contact-grid">
+            
+            <!-- ฝั่งซ้าย: ช่องทางติดต่อ -->
+            <div class="contact-card info-card">
+                <h2>ช่องทางการติดต่อ</h2>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <span class="contact-label">อีเมล</span>
+                        <a href="mailto:ratthaphum@example.com" class="contact-value">ratthaphum@example.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">โทรศัพท์</span>
+                        <a href="tel:0812345678" class="contact-value">081-234-5678</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">GitHub</span>
+                        <a href="https://github.com/ratthaphum" target="_blank" class="contact-value">github.com/ratthaphum</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-label">LinkedIn</span>
+                        <a href="https://linkedin.com/in/ratthaphum" target="_blank" class="contact-value">linkedin.com/in/ratthaphum</a>
+                    </div>
+                </div>
+            </div>
 
-        <!-- ฟอร์มส่งข้อความ -->
-        <section>
-            <h2>ส่งข้อความถึงผม</h2>
-            <form class="contact-form" action="#" method="POST">
-                <div class="field">
-                    <label for="name">ชื่อของคุณ</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="field">
-                    <label for="email">อีเมลของคุณ</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="field">
-                    <label for="message">ข้อความ</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">ส่งข้อความ</button>
-            </form>
-        </section>
+            <!-- ฝั่งขวา: ฟอร์มส่งข้อความ -->
+            <div class="contact-card form-card">
+                <h2>ส่งข้อความถึงผม</h2>
+                <form action="#" method="POST" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">ชื่อของคุณ</label>
+                        <input type="text" id="name" name="name" placeholder="ระบุชื่อ-นามสกุล" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">อีเมลของคุณ</label>
+                        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">ข้อความ</label>
+                        <textarea id="message" name="message" rows="4" placeholder="พิมพ์ข้อความของคุณที่นี่..." required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-full">ส่งข้อความ</button>
+                </form>
+            </div>
+
+        </div>
     </main>
 
-    <!-- ท้ายเว็บ -->
     <footer class="site-footer">
         <p>&copy; 2026 รัฐภูมิ เล่าคุ้ม</p>
-        <p>สร้างด้วย HTML และ CSS</p>
+        <p>สร้างด้วย HTML, CSS และ JavaScript</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
